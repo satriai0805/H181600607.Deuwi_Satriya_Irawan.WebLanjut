@@ -16,7 +16,7 @@ class KategoriBeritaAPIController extends Controller
     {
         $kategoriBeritas=KategoriBerita::all();
 
-        return $kategoriBeritas->toJson();
+        return $kategoriBeritas;
     }
 
     /**
@@ -28,8 +28,6 @@ class KategoriBeritaAPIController extends Controller
     public function store(Request $request)
     {
         $input=$request->all();
-
-        return $input;
 
         $kategoriBerita=KategoriBerita::create($input);
 

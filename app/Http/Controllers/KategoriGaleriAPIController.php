@@ -16,7 +16,7 @@ class KategoriGaleriAPIController extends Controller
     {
         $kategoriGaleris=KategoriGaleri::all();
 
-        return $kategoriGaleris->toJson();
+        return $kategoriGaleris;
     }
 
     /**
@@ -28,8 +28,6 @@ class KategoriGaleriAPIController extends Controller
     public function store(Request $request)
     {
         $input=$request->all();
-
-        return $input;
 
         $kategoriGaleri=KategoriGaleri::create($input);
 

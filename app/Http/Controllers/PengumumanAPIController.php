@@ -16,7 +16,7 @@ class PengumumanAPIController extends Controller
     {
         $pengumumans=Pengumuman::all();
 
-        return $pengumumans->toJson();
+        return $pengumumans;
     }
 
     /**
@@ -28,8 +28,6 @@ class PengumumanAPIController extends Controller
     public function store(Request $request)
     {
         $input=$request->all();
-
-        return $input;
 
         $pengumuman=Pengumuman::create($input);
 

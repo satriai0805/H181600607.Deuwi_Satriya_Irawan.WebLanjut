@@ -16,7 +16,7 @@ class GaleriAPIController extends Controller
     {
         $galeris=Galeri::all();
 
-        return $galeris->toJson();
+        return $galeris;
     }
 
     /**
@@ -28,8 +28,6 @@ class GaleriAPIController extends Controller
     public function store(Request $request)
     {
         $input=$request->all();
-
-        return $input;
 
         $galeri=Galeri::create($input);
 

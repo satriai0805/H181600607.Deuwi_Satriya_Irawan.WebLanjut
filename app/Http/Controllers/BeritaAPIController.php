@@ -16,7 +16,7 @@ class BeritaAPIController extends Controller
     {
         $beritas=Berita::all();
 
-        return $beritas->toJson();
+        return $beritas;
     }
 
     /**
@@ -28,8 +28,6 @@ class BeritaAPIController extends Controller
     public function store(Request $request)
     {
         $input=$request->all();
-
-        return $input;
 
         $berita=Berita::create($input);
 

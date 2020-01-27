@@ -16,7 +16,7 @@ class ArtikelAPIController extends Controller
     {
         $artikels=Artikel::all();
 
-        return $artikels->toJson();
+        return $artikels;
     }
 
     /**
@@ -28,8 +28,6 @@ class ArtikelAPIController extends Controller
     public function store(Request $request)
     {
         $input=$request->all();
-
-        return $input;
 
         $artikel=Artikel::create($input);
 
