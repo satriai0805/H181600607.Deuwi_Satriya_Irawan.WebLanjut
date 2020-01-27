@@ -13,16 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 Route::apiResource('artikel','ArtikelAPIController');
-Route::apiResource('kategoriArtikel','KategoriArtikelAPIController');
+Route::apiResource('kategori_artikel','KategoriArtikelAPIController');
 
 Route::apiResource('berita','BeritaAPIController');
-Route::apiResource('kategoriBerita','KategoriBeritaAPIController');
+Route::apiResource('kategori_berita','KategoriBeritaAPIController');
 
 Route::apiResource('galeri','GaleriAPIController');
-Route::apiResource('kategoriGaleri','KategoriGaleriAPIController');
+Route::apiResource('kategori_galeri','KategoriGaleriAPIController');
 
 Route::apiResource('pengumuman','PengumumanAPIController');
-Route::apiResource('kategoriPengumuman','KategoriPengumumanAPIController');
+Route::apiResource('kategori_pengumuman','KategoriPengumumanAPIController');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
